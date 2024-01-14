@@ -9,7 +9,7 @@ import numpy as np
 import cv2 
 import socket
 
-speed_limit = 10
+speed_limit = 25
 
 sio = socketio.Server()
 
@@ -50,7 +50,7 @@ def connect(sid, environ):
 
 if __name__ == '__main__':
     try:
-        model = load_model('alpha_model.h5')
+        model = load_model('model.h5')
         app = socketio.Middleware(sio, app)
         eventlet.wsgi.server(listen_socket, app)
     except Exception as ex:
