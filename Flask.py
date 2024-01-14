@@ -9,7 +9,7 @@ import numpy as np
 import cv2 
 import socket
 
-speed_limit = 25
+speed_limit = 10
 
 sio = socketio.Server()
 
