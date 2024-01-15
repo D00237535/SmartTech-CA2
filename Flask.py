@@ -50,7 +50,7 @@ def connect(sid, environ):
 
 if __name__ == '__main__':
     try:
-        model = load_model('model.h5')
+        model = load_model('Delta_model.h5')
         app = socketio.Middleware(sio, app)
         eventlet.wsgi.server(listen_socket, app)
     except Exception as ex:
